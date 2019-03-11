@@ -29,7 +29,7 @@ You will then receive your private key, save it in a txt to use it later.
 
 * Once logged in your vps, *copy/past* each line one by one with *Enter*
 
-	:arrow_forward: `wget -q https://github.com/CryptoFlowCoin/CryptoFlowCoin/releases/download/initial/cfl-mn.sh`
+	:arrow_forward: `wget -q https://github.com/CryptoFlowCoin/MN/blob/master/cfl-mn.sh`
 
 	:arrow_forward: `bash cfl-mn.sh`
 
