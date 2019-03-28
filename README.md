@@ -29,9 +29,9 @@ You will then receive your private key, save it in a txt to use it later.
 
 * Once logged in your vps, *copy/past* each line one by one with *Enter*
 
-	:arrow_forward: `wget -q https://github.com/CryptoFlowCoin/MN/raw/master/cfl-mn.sh`
+	:arrow_forward: `wget -q https://github.com/CryptoFlowCoin/MN/raw/master/cryptoflow.sh`
 
-	:arrow_forward: `bash cfl-mn.sh`
+	:arrow_forward: `bash cryptoflow.sh`
 
 
 * Let this run, and when it ask you to install dependencies, if you're not sure press ***y*** and then enter
