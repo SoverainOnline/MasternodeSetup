@@ -6,7 +6,7 @@ CONFIGFOLDER='/root/.cryptoflow'
 COIN_DAEMON='cryptoflowd'
 COIN_CLI='cryptoflow-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://github.com/CryptoFlowCoin/CryptoFlowCoin/releases/download/v1.2.1.1/CryptoFlow-1.2.1.1-ubuntu_daemon_16.04.tar.gz'
+COIN_TGZ='https://github.com/CryptoFlowCoin/CryptoFlowCoin/releases/download/v1.3.0.0/CryptoFlow-1.3.0.0-Linux.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='cryptoflow'
 COIN_PORT=3333
@@ -47,7 +47,7 @@ function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
   cd $TMP_FOLDER >/dev/null 2>&1
   wget -q $COIN_TGZ
-  tar xzvf CryptoFlow-1.2.1.1-ubuntu_daemon_16.04.tar.gz
+  unzip CryptoFlow-1.3.0.0-Linux.zip
   cd rev >/dev/null 2>&1
   chmod +x $COIN_DAEMON $COIN_CLI
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
@@ -146,15 +146,7 @@ masternode=1
 externalip=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
 
-#Addnodes
 
-addnode=95.179.133.7
-addnode=45.32.236.88
-addnode=45.32.184.32
-addnode=95.179.134.152
-addnode=45.32.185.119
-addnode=95.179.144.71
-addnode=185.92.222.53
 
 
 EOF
@@ -205,10 +197,7 @@ fi
 
 
 function checks() {
-if [[ $(lsb_release -d) != *16.04* ]]; then
-  echo -e "${RED}You are not running Ubuntu 16.04. Installation is cancelled.${NC}"
-  exit 1
-fi
+
 
 if [[ $EUID -ne 0 ]]; then
    echo -e "${RED}$0 must be run as root.${NC}"

@@ -1,4 +1,4 @@
-![Example-Logo](https://cdn.discordapp.com/attachments/444585576792981520/538825262725464067/CFL_MN_masternode_guide.png)
+![Example-Logo](https://cdn.discordapp.com/attachments/818812472441700382/818944537686310959/cryptoflow-logo--with-text-transparent-500x500.png)
 
 # CryptoFlow Masternode Setup Guide (Ubuntu 16.04)
 ***
