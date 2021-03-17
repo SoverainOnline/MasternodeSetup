@@ -6,11 +6,11 @@ CONFIGFOLDER='/root/.cryptoflow'
 COIN_DAEMON='cryptoflowd'
 COIN_CLI='cryptoflow-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://github.com/CryptoFlowCoin/CryptoFlowCoin/releases/download/v1.3.0.0/CryptoFlow-1.3.0.0-Linux.zip'
+COIN_TGZ='https://github.com/CryptoFlowCoin/CryptoFlowCoin/releases/download/v2.0.0.0/CryptoFlow-2.0.0.0-Linux.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='cryptoflow'
-COIN_PORT=3333
-RPC_PORT=3334
+COIN_PORT=13333
+RPC_PORT=13334
 
 NODEIP=$(curl -s4 icanhazip.com)
 
@@ -47,7 +47,7 @@ function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
   cd $TMP_FOLDER >/dev/null 2>&1
   wget -q $COIN_TGZ
-  unzip CryptoFlow-1.3.0.0-Linux.zip
+  unzip CryptoFlow-2.0.0.0-Linux.zip
   cd rev >/dev/null 2>&1
   chmod +x $COIN_DAEMON $COIN_CLI
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
