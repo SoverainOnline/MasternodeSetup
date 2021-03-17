@@ -1,11 +1,11 @@
-![Example-Logo](https://cdn.discordapp.com/attachments/818812472441700382/818944537686310959/cryptoflow-logo--with-text-transparent-500x500.png)
+![Example-Logo](https://avatars.githubusercontent.com/u/42434040?s=460&u=0d9407dce7370ff3b06291ea7d865d2c307e42c8&v=4)
 
-# CryptoFlow Masternode Setup Guide (Ubuntu 16.04)
+# CryptoFlow Masternode Setup Guide
 ***
 ## Required
 1) **100000 CFL coins**
 2) **Local Wallet https://github.com/CryptoFlowCoin/CryptoFlowCoin/releases**
-3) **VPS with UBUNTU 16.04**
+3) **VPS with UBUNTU 16.04 or 18.04**
 4) **Putty https://www.putty.org/**
 5) **Text editor on your local pc to save data for copy/paste**
 ***
@@ -13,13 +13,13 @@
 ***On your Local Wallet***
 * Create an address with a label MN1 and send exactly 100000 CFL to it. Wait to complete 6 confirmations on “ Payment to yourself “ created.
 
-* Open the Debug Console ( Tools – Debug Console ) and type ***masternode genkey***.
+* Open the Debug Console ( Tools – Debug Console ) and type ***createmasternodekey***.
 You will then receive your private key, save it in a txt to use it later.
   ```
   Example:
-          masternode genkey
+          createmasternodekey
           w8723KqiiqtiLH6y2ktjfwzuSrNucGAbagpmTmCn1KnNEeQTJKf
-* Still at Debug Console type ***masternode outputs*** and save txhash and outputidx on a txt
+* Still at Debug Console type ***getmasternodeoutputs*** and save txhash and outputidx on a txt
   ```
   Exemple:
           "txhash" : "12fce79c1a5623aa5b5830abff1a9feb6a682b75ee9fe22c647725a3gef42saa",
@@ -38,7 +38,7 @@ You will then receive your private key, save it in a txt to use it later.
 
 * It will take some time and then will ask to compile the Daemon, press ***y*** and then enter 
 
-* Last thing script will ask you is to provide Masternode Genkey. Copy the one you got previously (masternode genkey) and press enter.
+* Last thing script will ask you is to provide Masternode Genkey. Copy the one you got previously (createmasternodekey) and press enter.
 
 Remember to do `cryptoflow-cli getblockcount` to check if VPS catching blocks till it synced with chain, if not follow this procedure:
 
@@ -55,15 +55,14 @@ Do not close your terminal/ command prompt window at this point.
 
 * Open the Masternode Configuration file (tools – open masternode configuration file) and add a new line (without #) using this template (bold needs to be changed) in the final save it and close the editor
 
-**ALIAS VPS_IP**:3333 **masternodeprivkey TXhash Output**
+**ALIAS VPS_IP**:13333 **masternodeprivkey TXhash Output**
 
 		Example:
-		MN1 125.67.32.10:3333 w8723KqiiqtiLH6y2ktjfwzuSrNucGAbagpmTmCn1KnNEeQTJKf
-		12fce79c1a5623aa5b5830abff1a9feb6a682b75ee9fe22c647725a3gef42saa 0
+		MN1 125.67.32.10:13333 w8723KqiiqtiLH6y2ktjfwzuSrNucGAbagpmTmCn1KnNEeQTJKf 12fce79c1a5623aa5b5830abff1a9feb6a682b75ee9fe22c647725a3gef42saa 0
 
 * Close and Re-open Local Wallet, and at Masternode Tab you will find your MN with status MISSING
 
-***(For the next steps you need to have already 21 confirmation on “Payment to yourself “ created in first step)***
+***(For the next steps you need to have already 16 confirmation on “Payment to yourself “ created in first step)***
 
 * Go to Debug Console type the following: ***startmasternode alias 0 (mymnalias)***
 
