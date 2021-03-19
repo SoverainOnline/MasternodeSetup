@@ -47,7 +47,7 @@ function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
   cd $TMP_FOLDER >/dev/null 2>&1
   wget -q $COIN_TGZ
-  unzip CryptoFlow-2.0.0.1-Linux.zip
+  unzip $COIN_ZIP
   cd rev >/dev/null 2>&1
   chmod +x $COIN_DAEMON $COIN_CLI
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
@@ -243,13 +243,13 @@ clear
 function important_information() {
  echo
  echo -e "${BLUE}================================================================================================================================${NC}"
- echo -e "${GREEN}$COIN_NAME Masternode is up and running listening on port${NC}${PURPLE}$COIN_PORT${NC}."
+ echo -e "${GREEN}$COIN_NAME Masternode is up and running listening on port${NC} ${PURPLE}$COIN_PORT${NC}."
  echo -e "${GREEN}Configuration file is:${NC}${RED}$CONFIGFOLDER/$CONFIG_FILE${NC}"
  echo -e "${GREEN}Start:${NC}${RED}systemctl start $COIN_NAME.service${NC}"
  echo -e "${GREEN}Stop:${NC}${RED}systemctl stop $COIN_NAME.service${NC}"
  echo -e "${GREEN}VPS_IP:${NC}${GREEN}$NODEIP:$COIN_PORT${NC}"
  echo -e "${GREEN}Usage Commands.${NC}"
- echo -e "${GREEN}cryptoflow-cli masternode status${NC}"
+ echo -e "${GREEN}cryptoflow-cli getmasternodestatus${NC}"
  echo -e "${GREEN}cryptoflow-cli getinfo${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
  
