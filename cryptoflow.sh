@@ -127,7 +127,7 @@ function create_key() {
   COINKEY=$($COIN_PATH$COIN_CLI masternode genkey)
   if [ "$?" -gt "0" ];
     then
-    echo -e "${RED}Wallet not fully loaded. Let us wait and try again to generate the GEN Key${NC}"
+    echo -e "${RED}Wallet not fully loaded. Please wait 30 seconds and I will try again to generate a key. Do not press any buttons.${NC}"
     sleep 30
     COINKEY=$($COIN_PATH$COIN_CLI masternode genkey)
   fi
