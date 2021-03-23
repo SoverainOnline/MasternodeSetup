@@ -72,7 +72,7 @@ Do not close your terminal/ command prompt window at this point.
 
 ***Go back to Putty***
 
-   :arrow_forward: `cryptoflow-cli masternode status`
+   :arrow_forward: `cryptoflow-cli getmasternodestatus`
 
 You need to get **"status" : 4**
 
