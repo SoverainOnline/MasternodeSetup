@@ -3,7 +3,7 @@
 # CryptoFlow Masternode Setup Guide
 ***
 ## Required
-1) **100000 CFL coins**
+1) **200000 CFL coins**
 2) **Local Wallet https://github.com/CryptoFlowCoin/CryptoFlowCoin/releases**
 3) **VPS with UBUNTU 16.04 or 18.04**
 4) **Putty https://www.putty.org/**
@@ -11,7 +11,7 @@
 ***
 
 ***On your Local Wallet***
-* Create an address with a label MN1 and send exactly 100000 CFL to it. Wait to complete 6 confirmations on “ Payment to yourself “ created.
+* Create an address with a label MN1 and send exactly 200000 CFL to it. Wait to complete 6 confirmations on “ Payment to yourself “ created.
 
 * Open the Debug Console ( Tools – Debug Console ) and type ***createmasternodekey***.
 You will then receive your private key, save it in a txt to use it later.
