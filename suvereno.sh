@@ -3,7 +3,7 @@
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE='suvereno.conf'
 CONFIGFOLDER='/root/.suvereno'
-COIN_DAEMON='suvereno'
+COIN_DAEMON='suverenod'
 COIN_CLI='suvereno-cli'
 COIN_PATH='/usr/local/bin/'
 COIN_TGZ='https://github.com/decenomy/SUV/releases/download/v2.0.1.0/SUV-2.0.1.0-Linux.zip'
