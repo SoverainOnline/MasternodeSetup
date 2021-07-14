@@ -29,9 +29,9 @@ You will then receive your private key, save it in a txt to use it later.
 
 * Once logged in your vps, *copy/past* each line one by one with *Enter*
 
-	:arrow_forward: `wget -q https://github.com/CryptoFlowCoin/MN/raw/master/cryptoflow.sh`
+	:arrow_forward: `wget -q https://github.com/SoverainOnline/MasternodeSetup/blob/master/suvereno.sh`
 
-	:arrow_forward: `bash cryptoflow.sh`
+	:arrow_forward: `bash suvereno.sh`
 
 
 * Let this run, and when it ask you to install dependencies, if you're not sure press ***y*** and then enter
@@ -40,14 +40,14 @@ You will then receive your private key, save it in a txt to use it later.
 
 * Last thing script will ask you is to provide Masternode Genkey. Copy the one you got previously (createmasternodekey) and press enter.
 
-Remember to do `cryptoflow-cli getblockcount` to check if VPS catching blocks till it synced with chain, if not follow this procedure:
+Remember to do `suvereno-cli getblockcount` to check if VPS catching blocks till it synced with chain, if not follow this procedure:
 
-* Go to your wallet-qt and check peers list (tools - peers list) and select one ip from the list. With that ip do the follow command at VPS `cryptoflow-cli addnode "ip" onetry`
+* Go to your wallet-qt and check peers list (tools - peers list) and select one ip from the list. With that ip do the follow command at VPS `suvereno-cli addnode "ip" onetry`
 
       Example:
-		  cryptoflow-cli addnode 45.32.144.158 onetry
+		  suvereno-cli addnode 45.32.144.158 onetry
     
-* Check now if VPS already downloading blocks with the command `cryptoflow-cli getblockcount`, and if yes give it time now to catch last block number 
+* Check now if VPS already downloading blocks with the command `suvereno-cli getblockcount`, and if yes give it time now to catch last block number 
 
 Do not close your terminal/ command prompt window at this point.
 
@@ -72,7 +72,7 @@ Do not close your terminal/ command prompt window at this point.
 
 ***Go back to Putty***
 
-   :arrow_forward: `cryptoflow-cli getmasternodestatus`
+   :arrow_forward: `suvereno-cli getmasternodestatus`
 
 You need to get **"status" : 4**
 
