@@ -76,4 +76,4 @@ Do not close your terminal/ command prompt window at this point.
 
 You need to get **"status" : 4**
 
-## Congratulations your CryptoFlow node it's running
+## Congratulations your Suvereno node it's running
