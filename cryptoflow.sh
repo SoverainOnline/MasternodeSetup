@@ -1,16 +1,16 @@
 #!/bin/bash
 
 TMP_FOLDER=$(mktemp -d)
-CONFIG_FILE='cryptoflow.conf'
-CONFIGFOLDER='/root/.cryptoflow'
-COIN_DAEMON='cryptoflowd'
-COIN_CLI='cryptoflow-cli'
+CONFIG_FILE='suvereno.conf'
+CONFIGFOLDER='/root/.suvereno'
+COIN_DAEMON='suvereno'
+COIN_CLI='suvereno-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://github.com/CryptoFlowCoin/CryptoFlowCoin/releases/download/v2.0.0.1/CryptoFlow-2.0.0.1-Linux.zip'
+COIN_TGZ='https://github.com/decenomy/SUV/releases/download/v2.0.1.0/SUV-2.0.1.0-Linux.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
-COIN_NAME='cryptoflow'
-COIN_PORT=13333
-RPC_PORT=13334
+COIN_NAME='suvereno'
+COIN_PORT=18976
+RPC_PORT=18977
 
 NODEIP=$(curl -s4 icanhazip.com)
 
@@ -249,8 +249,8 @@ function important_information() {
  echo -e "${GREEN}Stop:${NC}${RED}systemctl stop $COIN_NAME.service${NC}"
  echo -e "${GREEN}VPS_IP:${NC}${GREEN}$NODEIP:$COIN_PORT${NC}"
  echo -e "${GREEN}Usage Commands.${NC}"
- echo -e "${GREEN}cryptoflow-cli getmasternodestatus${NC}"
- echo -e "${GREEN}cryptoflow-cli getinfo${NC}"
+ echo -e "${GREEN}suvereno-cli getmasternodestatus${NC}"
+ echo -e "${GREEN}suvereno-cli getinfo${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
  
  }
