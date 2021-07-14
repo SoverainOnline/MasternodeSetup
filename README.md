@@ -11,7 +11,7 @@
 ***
 
 ***On your Local Wallet***
-* Create an address with a label MN1 and send exactly 8000 CFL to it. Wait to complete 6 confirmations on “ Payment to yourself “ created.
+* Create an address with a label MN1 and send exactly 8000 SUV to it. Wait to complete 6 confirmations on “ Payment to yourself “ created.
 
 * Open the Debug Console ( Tools – Debug Console ) and type ***createmasternodekey***.
 You will then receive your private key, save it in a txt to use it later.
