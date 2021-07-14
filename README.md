@@ -1,17 +1,17 @@
-![Example-Logo](https://avatars.githubusercontent.com/u/42434040?s=460&u=0d9407dce7370ff3b06291ea7d865d2c307e42c8&v=4)
 
-# CryptoFlow Masternode Setup Guide
+
+# Suvereno Masternode Setup Guide
 ***
 ## Required
-1) **200000 CFL coins**
-2) **Local Wallet https://github.com/CryptoFlowCoin/CryptoFlowCoin/releases**
+1) **8000 SUV coins**
+2) **Local Wallet https://github.com/decenomy/SUV/releases**
 3) **VPS with UBUNTU 16.04 or 18.04**
 4) **Putty https://www.putty.org/**
 5) **Text editor on your local pc to save data for copy/paste**
 ***
 
 ***On your Local Wallet***
-* Create an address with a label MN1 and send exactly 200000 CFL to it. Wait to complete 6 confirmations on “ Payment to yourself “ created.
+* Create an address with a label MN1 and send exactly 8000 CFL to it. Wait to complete 6 confirmations on “ Payment to yourself “ created.
 
 * Open the Debug Console ( Tools – Debug Console ) and type ***createmasternodekey***.
 You will then receive your private key, save it in a txt to use it later.
